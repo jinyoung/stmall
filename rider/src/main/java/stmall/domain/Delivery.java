@@ -51,11 +51,13 @@ public class Delivery {
     public static void addDeliveryItem(OrderPlaced orderPlaced) {
         //implement business logic here:
 
-        /** Example 1:  new item 
+        /** Example 1:  new item */
         Delivery delivery = new Delivery();
+        delivery.setAddress(orderPlaced.getAddress());
+        delivery.setProductId(orderPlaced.getProductId());
         repository().save(delivery);
 
-        */
+        
 
         /** Example 2:  finding and process
         
