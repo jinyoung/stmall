@@ -1,0 +1,74 @@
+
+import Vue from 'vue'
+import Router from 'vue-router'
+
+Vue.use(Router);
+
+
+import OrderOrderManager from "./components/listers/OrderOrderCards"
+import OrderOrderDetail from "./components/listers/OrderOrderDetail"
+
+import RiderDeliveryManager from "./components/listers/RiderDeliveryCards"
+import RiderDeliveryDetail from "./components/listers/RiderDeliveryDetail"
+
+import InventoryInventoryManager from "./components/listers/InventoryInventoryCards"
+import InventoryInventoryDetail from "./components/listers/InventoryInventoryDetail"
+
+import MarketingPointManager from "./components/listers/MarketingPointCards"
+import MarketingPointDetail from "./components/listers/MarketingPointDetail"
+
+
+
+export default new Router({
+    // mode: 'history',
+    base: process.env.BASE_URL,
+    routes: [
+            {
+                path: '/orders/orders',
+                name: 'OrderOrderManager',
+                component: OrderOrderManager
+            },
+            {
+                path: '/orders/orders/:id',
+                name: 'OrderOrderDetail',
+                component: OrderOrderDetail
+            },
+
+            {
+                path: '/riders/deliveries',
+                name: 'RiderDeliveryManager',
+                component: RiderDeliveryManager
+            },
+            {
+                path: '/riders/deliveries/:id',
+                name: 'RiderDeliveryDetail',
+                component: RiderDeliveryDetail
+            },
+
+            {
+                path: '/inventories/inventories',
+                name: 'InventoryInventoryManager',
+                component: InventoryInventoryManager
+            },
+            {
+                path: '/inventories/inventories/:id',
+                name: 'InventoryInventoryDetail',
+                component: InventoryInventoryDetail
+            },
+
+            {
+                path: '/marketings/points',
+                name: 'MarketingPointManager',
+                component: MarketingPointManager
+            },
+            {
+                path: '/marketings/points/:id',
+                name: 'MarketingPointDetail',
+                component: MarketingPointDetail
+            },
+
+
+
+
+    ]
+})
